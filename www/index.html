@@ -6,10 +6,26 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
-	<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam ab numquam placeat tempora maxime perspiciatis alias, incidunt quisquam repellat beatae quibusdam veniam nam deleniti amet recusandae earum dolore, voluptate possimus.</h1>
+	<!--<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam ab numquam placeat tempora maxime perspiciatis alias, incidunt quisquam repellat beatae quibusdam veniam nam deleniti amet recusandae earum dolore, voluptate possimus.</h1>
 
 	<p> I am {{15 + 10}}</p>
-	<p>{{"Hello" + " World"}} </p>
+	<p>{{"Hello" + " World"}} </p>-->
+
+	<div class="container" ng-controller="StoreController as store">
+		<div class="list-group">
+			<div class="list-group-item"  ng-repeat="product in store.products">
+				<h3>
+					{{product.name}}
+					<em class="pull-right">${{product.price}}</em>
+				</h3>
+				<p>{{product.description}}</p>
+				<button ng-show="product.canPurchase">Add to Cart</button>
+			</div>
+			
+		</div>
+		
+	</div>
+
 	
 	<script src="js/angular.min.js"></script>
 	<script src="js/app.js"></script>
