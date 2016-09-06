@@ -19,6 +19,10 @@
 				{id:0, url:'img/gem-01.gif'},
 				{id:1, url:'img/gem-02.gif'},
 				{id:2, url:'img/gem-03.gif'}
+			],
+			reviews: [
+				{stars: 5, body: 'I love this product', author:'alonso@gmail.com'},
+				{stars: 5, body: 'I love this product', author:'alonso@gmail.com'}
 			]
 		},
 		{
@@ -31,6 +35,10 @@
 				{id:0, url:'img/gem-04.gif'},
 				{id:1, url:'img/gem-05.gif'},
 				{id:2, url:'img/gem-06.gif'}
+			],
+			reviews: [
+				{stars: 5, body: 'I love this product', author:'alonso@gmail.com'},
+				{stars: 5, body: 'I love this product', author:'alonso@gmail.com'}
 			]
 		},
 		{
@@ -43,6 +51,10 @@
 				{id:0, url:'img/gem-07.gif'},
 				{id:1, url:'img/gem-08.gif'},
 				{id:2, url:'img/gem-09.gif'}
+			],
+			reviews: [
+				{stars: 5, body: 'I love this product', author:'alonso@gmail.com'},
+				{stars: 5, body: 'I love this product', author:'alonso@gmail.com'}
 			]
 		}	
 	];
@@ -63,6 +75,10 @@
 		this.isSelected = function(checkTab){
 			return this.tab === checkTab;
 		};
+	});
+
+	app.controller('ReviewsController',function(){
+      this.review = {};
 	});
 
 })();
