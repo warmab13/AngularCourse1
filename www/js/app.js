@@ -86,4 +86,19 @@
 
 	});
 
+	/*app.directive('productTitle', function(){
+		return{
+			restrict: 'E',
+			templateUrl: 'product-title.html'
+		};
+	});
+*/
+	app.directive('productTitle', function(){
+		return{
+			restrict: 'A',
+			templateUrl: 'product-title.html'
+		};
+	});
+
+
 })();
