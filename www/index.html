@@ -16,9 +16,17 @@
 		<div class="list-group">
 			<div class="list-group-item"  ng-repeat="product in store.products | orderBy: 'price'">
 				<h3 product-title></h3>
-				<img ng-src="{{product.images[0].url}}" alt="">
+				<img ng-src="{{product.images[0].url}}"  class="center-block"alt="">
 				<!--<product-title></product-title>-->
-				<p>cosa rara</p>
+				<div class="row">
+					<div class="col-sm-6 col-md-3">
+						<a href="" class="thumnail">
+							<img ng-repeat="image in product.images"
+							ng-src="{{image.url}}" class="image-responsive">
+						</a>
+					</div>
+				</div>
+
 				<product-panels></product-panels>
 				<!--<button ng-show="!product.canPurchase">Add to Cart</button>-->
 				
