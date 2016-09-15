@@ -16,15 +16,31 @@
 		<div class="list-group">
 			<div class="list-group-item"  ng-repeat="product in store.products | orderBy: 'price'">
 				<h3 product-title></h3>
-				<img ng-src="{{product.images[0].url}}"  class="center-block"alt="">
+				<!--<img ng-src="{{product.images[0].url}}"  class="center-block"alt="">
 				<!--<product-title></product-title>-->
-				<div class="row">
+				<!--<div class="row">
 					<div class="col-sm-6 col-md-3">
 						<a href="" class="thumnail">
 							<img ng-repeat="image in product.images"
 							ng-src="{{image.url}}" class="image-responsive">
 						</a>
 					</div>
+				</div>-->
+
+				<div class="" ng-controller="GalleryController as gallery" ng-show="product.images.length">
+					<div class="img-wrap">
+						<img class="center-block" ng-src="{{product.images[gallery.current].url}}">
+					</div>
+					<div class=" row">
+						<div class="center-block">
+							<ul class="img-thumbnails clearfix ">
+								<li class="small-image pull-left thumbnail" ng-repeat="image in product.images">
+									<img  ng-src="{{image.url}}" ng-click="gallery.setCurrent(image.id)" alt="">
+								</li>
+							</ul>
+						</div>
+					</div>
+					
 				</div>
 
 				<product-panels></product-panels>
@@ -39,6 +55,7 @@
 	
 	<script src="js/angular.min.js"></script>
 	<script src="js/app.js"></script>
+	<script src="js/products.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
